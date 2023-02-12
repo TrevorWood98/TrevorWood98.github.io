@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap" rel="stylesheet">
+    <script src="famwebsiteWood/home.js"></script>
+    <script language="JavaScript">
+
+        var TRange = null;
+        function findString(str) {
+            if (parseInt(navigator.appVersion) < 4) return;
+            var strFound;
+            if (window.find) {
+
+                // CODE FOR BROWSERS THAT SUPPORT window.find
+                strFound = self.find(str);
+                if (strFound && self.getSelection && !self.getSelection().anchorNode) {
+                    strFound = self.find(str)
+                }
+                if (!strFound) {
+                    strFound = self.find(str, 0, 1)
+                    while (self.find(str, 0, 1)) continue
+                }
+            }
+            else if (navigator.appName.indexOf("Microsoft") != -1) {
+
+                // EXPLORER-SPECIFIC CODE
+
+                if (TRange != null) {
+                    TRange.collapse(false)
+                    strFound = TRange.findString(str)
+                    if (strFound) TRange.select()
+                }
+                if (TRange == null || strFound == 0) {
+                    TRange = self.document.body.createTextRange()
+                    strFound = TRange.findString(str)
+                    if (strFound) TRange.select()
+                }
+            }
+            else if (navigator.appName == "Opera") {
+                alert("Opera browsers not supported, sorry...")
+                return;
+            }
+            if (!strFound) alert("String '" + str + "' not found!")
+            return;
+        }
+        //-->
+    </script>
+
+    <title>Wood Family Website</title>
+</head>
+
+
+
+<body class="body_background">
+    <!--JumboTron for the title-->
+    <div class="jumbotron text-center bg-primary text-white">
+        <h1 class="display-4">Welcome to the Wood Family Website</h1>
+        <hr class="my-4 bg-light">
+        <p class="lead"> Our Home Videos</p>
+    </div>
+
+
+
+    <!--Navbar-->
+    <div row id="navbar">
+        <nav class="navbar navbar-expand-lg bg-dark ">
+            <a class="navbar-brand" href="index.html">Wood Family</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://drive.google.com/drive/u/0/folders/1YzInY62bUYnD5yJIbz0sbzMrkYZbvf8S">The
+                            Vault</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Videos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Birthday-Videos.html">Birthdays</a>
+                            <a class="dropdown-item" href="Christmas-Videos.html">Christmas</a>
+                            <a class="dropdown-item" href="Holiday-Videos.html">Holidays</a>
+                            <a class="dropdown-item" href="Fun-At-The-House.html">Fun At The House</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Images (Coming Soon)</a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <!--Search Bar-->
+    <div class="container my-5">
+        <form name="f1" action=""
+            onSubmit="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value);return false">
+            <input class="search_box" type="text" name=t1 value="" size=20>
+            <input class="button" type="submit" name=b1 value="Search">
+        </form>
+    </div>
+
+
+    <!--END SEARCH BOX -->
+
+
+    <!-- Videos Portion-->
+    <div class="container my-5">
+        <div class="row text-center banner video-label">
+            <h2>Christmas</h2>
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+
+
+        <!--Row 1 for Christmas-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/fPJl6rdACb4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Wood Christmas 1997</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/xpt-eUJ3dBo" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Neal Christmas 1997</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!--Video 3 Birthdays-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/OUswQ3hEu-w" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Setting Up Tree 1997</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Row 2 for Christmas-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/Gir99xRKSoE" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas 1998</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/gd_R6c3Waiw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Morning 2000</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!--Video 6 Christmas-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/8qvJGLlLAJc" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Eve 2000</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Row 3 for Christmas-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/OOQ-UPqIPWA" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Morning 2001</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/y_qpNQpep-U" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Wood Christmas 2001</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!--Video 6 Christmas-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/s427G9ts1q8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Neal Christmas 2001</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Row 4 for Christmas-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/a5EUJ_VQC8k" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Morning 2003</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/Xd6qN9ulOA8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Morning 2005</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!--Video 6 Christmas-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/7D_kgQqXg1M" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Day 2005</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--Row 5 for Christmas-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/n3SXSe09LLc" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Eve 2006</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/s9ZK9Ar0Hxo" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Morning 2006</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!--Video 6 Christmas-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/hJsom1bkT7k" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Morning 2007</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Row 6 for Christmas-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/SVB7D8CwDa8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Morning 2008</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/9c47UnJrpNE" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas 2010</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!--Video 6 Christmas-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/Wk3JbCW3_lw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas Morning 2012</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Row 7 for Christmas-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/RTNE7SSg8QA" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Christmas 2014</h5>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+</body>
+
+</html>
+
+
+<!--
+
+    Video 1: https://www.youtube.com/embed/fPJl6rdACb4
+    Video 2: https://www.youtube.com/embed/xpt-eUJ3dBo
+    Video 3: https://www.youtube.com/embed/OUswQ3hEu-w"
+-->

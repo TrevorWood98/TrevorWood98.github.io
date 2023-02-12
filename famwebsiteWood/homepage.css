@@ -1,0 +1,164 @@
+.jumbotron {
+    /* background-color: #1b95e0; */
+    /* Twitter blue */
+    /* color: #fff;*/
+    font-family: 'Proxima Nova', sans-serif;
+    padding: 6.25rem;
+}
+
+/*backgroun*/
+
+
+.body_background {
+    background-color: #282828;
+}
+
+/*Video Section*/
+
+.card {
+    height: 100%;
+    box-shadow: 2px 2px 4px #000;
+    border-radius: 8px;
+    border: solid #1b95e0;
+    padding: 4px 6px
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    height: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to right, #1b95e0, #ddd);
+    border-radius: 2px;
+
+}
+
+.card-title {
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    font-family: "Press Start 2P", sans-serif;
+}
+
+.h2 {
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+
+
+/*search portion*/
+.button {
+    background-color: #1b95e0;
+    border-radius: 8px;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 4px #000;
+    font-family: "Press Start 2P", sans-serif;
+    color: #000;
+    padding: 4px 6px
+}
+
+.search_box {
+    background-color: whitesmoke;
+    border-radius: 8px;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 4px #000;
+    color: #000;
+    padding: 4px 6px;
+    align-self: flex-start;
+}
+
+
+
+
+.banner {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #1b95e0, #ddd);
+    height: 80px;
+    box-shadow: 2px 2px 4px #000;
+    transform: rotateX(10deg) translateZ(-10px);
+}
+
+.video-label {
+    text-shadow: 2px 2px 4px #000;
+    color: #fff;
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.description-border {
+    display: flex;
+    background: #1b95e0;
+    height: 80px;
+
+
+}
+
+.description-label {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+
+}
+
+
+
+
+/*navbar*/
+
+@media (max-width: 767px) {
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+
+    }
+
+    .navbar-toggler {
+        background-color: white;
+        display: inline;
+        margin: auto;
+        padding: .75rem;
+    }
+
+}
+
+
+/*Homepage Profile Pictures*/
+
+.famprofile {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: .1rem;
+    margin: auto;
+    border: 5px solid;
+    border-color: #000;
+}
+
+.profile-name {
+    color: white;
+}
