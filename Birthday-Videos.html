@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap" rel="stylesheet">
+
+    <script language="JavaScript">
+
+        var TRange = null;
+        function findString(str) {
+            if (parseInt(navigator.appVersion) < 4) return;
+            var strFound;
+            if (window.find) {
+
+                // CODE FOR BROWSERS THAT SUPPORT window.find
+                strFound = self.find(str);
+                if (strFound && self.getSelection && !self.getSelection().anchorNode) {
+                    strFound = self.find(str)
+                }
+                if (!strFound) {
+                    strFound = self.find(str, 0, 1)
+                    while (self.find(str, 0, 1)) continue
+                }
+            }
+            else if (navigator.appName.indexOf("Microsoft") != -1) {
+
+                // EXPLORER-SPECIFIC CODE
+
+                if (TRange != null) {
+                    TRange.collapse(false)
+                    strFound = TRange.findString(str)
+                    if (strFound) TRange.select()
+                }
+                if (TRange == null || strFound == 0) {
+                    TRange = self.document.body.createTextRange()
+                    strFound = TRange.findString(str)
+                    if (strFound) TRange.select()
+                }
+            }
+            else if (navigator.appName == "Opera") {
+                alert("Opera browsers not supported, sorry...")
+                return;
+            }
+            if (!strFound) alert("String '" + str + "' not found!")
+            return;
+        }
+        //-->
+    </script>
+
+    <title>Wood Family Website</title>
+</head>
+
+
+
+<body class="body_background">
+    <!--JumboTron for the title-->
+    <div class="jumbotron text-center bg-primary text-white">
+        <h1 class="display-4">Welcome to the Wood Family Website</h1>
+        <hr class="my-4 bg-light">
+        <p class="lead"> Our Home Videos</p>
+    </div>
+
+
+
+    <!--Navbar-->
+    <div row id="navbar">
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <a class="navbar-brand" href="index.html">Wood Family</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://drive.google.com/drive/u/0/folders/1YzInY62bUYnD5yJIbz0sbzMrkYZbvf8S">The
+                            Vault</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Videos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Birthday-Videos.html">Birthdays</a>
+                            <a class="dropdown-item" href="Christmas-Videos.html">Christmas</a>
+                            <a class="dropdown-item" href="Holiday-Videos.html">Holidays</a>
+                            <a class="dropdown-item" href="Fun-At-The-House.html">Fun At The House</a>
+                            <a class="dropdown-item" href="School-Activities.html">School Activities</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+    <!--Search Bar-->
+    <div class="container my-5">
+        <form name="f2" action=""
+            onSubmit="if(this.t2.value!=null && this.t2.value!='') findString(this.t2.value);return false">
+            <input class="search_box" type="text" name=t2 value="" size=20>
+            <input class="button" type="submit" name=b2 value="Search">
+        </form>
+    </div>
+
+
+    <!--END SEARCH BOX -->
+
+
+
+    <!-- Videos Portion-->
+    <div class="container my-5">
+        <div class="row text-center banner video-label">
+            <h2>Birthday's</h2>
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+
+
+        <!--Row 1 for Birthday-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/AWZJzb2M0So" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Trevor's First Birthday (Full)</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/-F-NcVoTD2Y" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Tori's First Birthday Part 1</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!--Video 3 Birthdays-->
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/swUYVahss70" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Tori's First Birthday Part 2</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--Row 2 for Birthday-->
+        <div class="row d-flex justify-content-center">
+            <!--Video 1-->
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/cJGxLh0iMQk" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Tori's Birth</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/nzGkUGGUFzk" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">Trevor's Birth Part 2</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</body>
+
+
+</html>
