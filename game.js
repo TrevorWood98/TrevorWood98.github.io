@@ -12,7 +12,7 @@ sprite.src = "images/sprite.png";
 
 // LOAD SOUNDS
 const SCORE_S = new Audio();
-SCORE_S.src = "audio/audio_sfx_point.wav";
+SCORE_S.src = "audio/Sophie Bark.m4a";
 
 const FLAP = new Audio();
 FLAP.src = "audio/audio_sfx_flap.wav";
